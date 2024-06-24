@@ -19,7 +19,7 @@ export class ProductosServiciosService {
   }
 
   ObtenerproductoxID(id:number):Observable<any>{
-    return this.http.get<Productos>(`${this.urlApi}?linkTo=id_producto&equalTo=${id}`);
+    return this.http.get<Productos>(`${this.urlApi}/${id}`);
   }
 
   Obtenerproductoxnombre(name:string)

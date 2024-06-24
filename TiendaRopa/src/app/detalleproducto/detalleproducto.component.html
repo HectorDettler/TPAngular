@@ -1,1 +1,14 @@
-<p>detalleproducto works!</p>
+<div class="producto-container">
+    <div class="producto-imagen">
+        <img src="{{ producto.image}}" alt="Nombre del Producto">
+    </div>
+    <div class="producto-info">
+        <h1 class="nombre">{{producto.title}}</h1>
+        <p class="precio">${{producto.price}}</p>
+        <p class="descripcion">
+            {{producto.description}}
+        </p>
+    </div>
+</div>
+
+

@@ -1,0 +1,53 @@
+:host {
+    
+    display: block;
+    background-image: url('../../assets/imagenes/diseno-interiores-retail-altertecnia-portada.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+
+.producto-container {
+    display: flex;
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    
+}
+
+.producto-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nombre {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 20px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-size: 16px;
+    line-height: 1.6;
+}
