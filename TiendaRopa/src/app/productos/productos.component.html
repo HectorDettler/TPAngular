@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>NUESTRA SELECCION DE PRODUCTOS</h1>
+    <div class="filtro">
+        <div class="buscador">
+            <input type="text" id="buscar" placeholder="Busque un producto en especifico">
+        </div>
+        
+    </div>
+    <div class="container-cards" >
+        
+            <app-card *ngFor="let products of productos" [products]="products"></app-card>
+    </div>
+    
+</div>

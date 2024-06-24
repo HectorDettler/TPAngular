@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 1.5rem 2%;
+    /*background-color: rgb(0, 0,0,.1);
+    backdrop-filter: blur(50px);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0,0,.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+    
+}
+
+header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);
+    transition: .5s;
+
+}
+header:hover:after{
+    left: 100%;
+}
+/*.logo img::before{
+    z-index: 200;
+}*/
+
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img{
+    height: 100px;
+    margin-right: 10px;
+}
+
+.navbar{
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a{
+    font-weight: 600;
+    padding: 10px 15px;
+    margin-left: 50px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+nav a:hover{
+    color:red;
+    border-color: black;
+    background: black;
+}
+
+#check{
+    display: none;
+}
+
+.iconos{
+    position: absolute;
+    right: 5%;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+    color:white;
+}
+
+
+
+/*PARTE RESPONSIVA*/
+
+@media (max-width: 992px){
+    header{
+        padding: 1.5rem 5%;
+
+    }
+}
+
+@media (max-width: 768px){
+    .iconos{
+        display: inline-flex;
+    }
+
+    #check:checked~.iconos #iconomenu{
+        display: none;
+
+    }
+
+    .iconos #iconocerrar{
+        display: none;
+    }
+
+    #check:checked~.iconos #iconocerrar{
+        display: block;
+
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left:0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0.5rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar{
+        height: 8.5rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        transition: .3s ease;
+        opacity: 0;
+
+
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay:calc(.15 * var(--i)) ;
+
+    }
+
+}
+

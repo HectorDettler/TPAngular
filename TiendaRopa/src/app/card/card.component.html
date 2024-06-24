@@ -1,0 +1,18 @@
+<div class="cardconteiner">
+    <div class="card">
+        <div class="seccionimg">
+            <img src="{{ products.image }}" alt="">
+            <div class="overlay">
+                <button class="detalleproducto" >Ver mas</button>
+            </div>
+        </div>
+
+        <div class="info">
+            <h3>{{products.title.slice(0, 20)}}</h3>
+            <p class="precio">{{products.price | currency}}</p>
+            <p>{{products.description.slice(0, 50) }}</p>
+        </div>
+
+    </div>
+
+</div>
